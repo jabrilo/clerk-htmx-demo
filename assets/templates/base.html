@@ -1,0 +1,27 @@
+{{ define "base" }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <header>
+        <section>
+            <h1>Website</h1>
+        </section>
+        <nav>
+            {{ template "navlinks" .}}
+        </nav>
+    </header>
+    <main>
+        {{ block "main" .}} {{ end }}
+    </main>
+    <footer>
+        <p>All rights reserved &copy; 2025</p>
+    </footer>
+    <script src="https://unpkg.com/htmx.org@2.0.4"></script>
+</body>
+</html>
+{{ end }}
